@@ -1631,17 +1631,17 @@ Content-Type: application/manifest+json
           <code title="">related_applications</code> member
         </h3>
         <p>
+          A <dfn>related application</dfn> is an application provided by the
+          underlying application platform that has a relationship with the
+          web application <a>associated with a manifest</a>.
+        <p>
           The <dfn id=
           "member-related_applications"><code>related_applications</code></dfn>
-          member lists the applications related to the web application.
-        </p>
-        <p>
-          The <code>related_applications</code> member is an indication of a
-          relationship of the web application and the listed applications
-          that are provided by the underlying application platform. This
-          relationship is unidirectional and unless a listed application claims
-          the same relationship, the <a>user agent</a> MUST NOT assume a
-          bi-directional endorsement.
+          member lists <a>related application</a>s and serves as an indication
+          of such a relationship between web application and <a>related
+          application</a>s. This relationship is unidirectional and unless a
+          listed application claims the same relationship, the <a>user agent</a>
+          MUST NOT assume a bi-directional endorsement.
         </p>
         <p>
           Example of usages of the <code>related_applications</code> could be a
@@ -1654,7 +1654,7 @@ Content-Type: application/manifest+json
           The <dfn>steps for processing the <code>related_applications</code>
           member</dfn> are given by the following algorithm. The algorithm
           takes a manifest as an argument. This algorithm returns a list of
-          applications objects <var>applications</var>, which can be empty.
+          application objects <var>applications</var>, which can be empty.
         </p>
         <ol>
           <li>Let <var>applications</var> be an empty list.
@@ -1718,19 +1718,14 @@ Content-Type: application/manifest+json
         <p>
           The <dfn id=
           "member-prefer_related_applications"><code>prefer_related_applications</code></dfn>
-          member is a boolean value this is used as a hint for the user agent
-          to say that related applications should be preferred over the web
-          application. The user agent MUST consider the missing value as
-          equivalent to have it set to <code>false</code>.
-        </p>
-        <p>
-          The <code>prefer_related_applications</code> member is as an
-          indication to the user agent that related applications should be
-          preferred over the web application when appropriate. For example, if
-          the user agent wants to suggest to install the web application and
-          the <code>prefer_related_applications</code> is set to
-          <code>true</code>, the user agent might want to suggest installing
-          one of the listed related applications instead.
+          member is a boolean value that is used as a hint for the user agent
+          to say that <a>related application</a>s should be preferred over the
+          web application. The user agent MUST consider the missing value as
+          equivalent to have it set to <code>false</code>. If the
+          <code>prefer_related_applications</code> is set to <code>true</code>,
+          and the user agent wants to suggest to install the web application,
+          the user agent might want to suggest installing one of the
+          <a>related application</a>s instead.
         </p>
         <p>
           The <dfn>steps for processing the
